@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .logo {
+        width: 35px;
+        top: 0;
+        margin-left: 105px;
+        margin-right: 7px;
+        border: 0px;
+      }
+      .search {
+        width: 500px;
+      }
+      .navdesign {
+        margin-left: 150px;
+      }
+      center {
+        margin: 0;
+        padding: 0;
+      }
+      .profile {
+        border-radius: 50%;
+        width: 35px;
+      }
+      .profileside {
+        border-radius: 50%;
+        width: 80px;
+        margin-top: 25px;
+      }
+      .profilemain {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        margin-top: 25px;
+        margin-left: 15px;
+      }
+      .dropdown * {
+        border: 0;
+        background-color: white;
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+      }
+      .contetn-main {
+        margin-top: 30px;
+        margin-left: 0;
+      }
+      .content-right {
+        margin-top: 30px;
+      }
+      .content-left {
+        margin-top: 30px;
+        background-color: rgb(255, 255, 255);
+      }
+      .card {
+        margin-left: 30px;
+        border-radius: 10px;
+        width: 150px;
+      }
+      .PostSearch {
+        display: flex;
+        flex-direction: row;
+      }
+      .postinput {
+        border-radius: 30px;
+        height: 48px;
+        margin-top: 25px;
+        margin-left: 15px;
+      }
+      .buttoncon {
+        align-items: center;
+        margin-left: 15px;
+      }
+      .buttonpost {
+        align-items: center;
+        margin-left: 15px;
+      }
+      .buttonpost button {
+        border-radius: 5px;
+        margin-left: 7px;
+        margin-top: 12px;
+        border: 0px;
+        padding: 12px;
+      }
+      .buttoncon button {
+        border-radius: 5px;
+        margin: 10px;
+        margin-left: 10px;
+        border: 0px;
+        padding: 5px;
+      }
+      button i {
+        margin-right: 10px;
+      }
+      .profilepost {
+        /* border-radius: 100%; */
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .user {
+        margin-top: 10px;
+        margin-left: 7px;
+      }
+      .recent {
+        position: sticky;
+        top: 80px;
+        width: 290px;
+        margin-left: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <img src="./image/logo.png" class="logo img-fluid" alt="logo" />
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="&#xF002; Search"
+            style="font-family: Arial, FontAwesome"
+            aria-label="Search"
+            class="search"
+          />
+        </form>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse navdesign"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                ><center>
+                  <i class="fa-solid fa-house"></i>
+                </center>
+                Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <center>
+                  <i class="fa-solid fa-users fa-1x"></i>
+                </center>
+                My Network</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <center>
+                  <i class="fa-solid fa-briefcase"></i>
+                </center>
+                Jobs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+                <center><i class="fa-solid fa-comment-dots"></i></center>
+                Messaging</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
+                ><center><i class="fa-sharp fa-solid fa-bell"></i></center>
+                Notification</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
+                ><center>
+                  <img
+                    src="./image/profile.jpeg"
+                    class="profile"
+                    alt="profile"
+                  />
+                </center>
+                <div class="dropdown">
+                  <select name="" id="">
+                    <option value="" style="color: black">Me</option>
+                  </select>
+                </div></a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
+                ><center>
+                  <img src="./image/grid.png" style="width: 20px" alt="" />
+                </center>
+                <div class="dropdown">
+                  <select name="" id="">
+                    <option value="" style="color: black">Work</option>
+                  </select>
+                </div></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#"
+                tabindex="-1"
+                style="color: rgb(163, 129, 44)"
+                aria-disabled="true"
+              >
+                Try Premium For <br />
+                <center>Free</center>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="content-left">
+        <div class="card" style="width: 18rem; margin-left: 90px">
+          <!-- <img src="..." class="card-img-top" alt="..." /> -->
+          <center>
+            <img src="./image/profile.jpeg" class="profileside" alt="profile" />
+          </center>
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center">Missam Naqvi</h5>
+            <p class="card-text" style="text-align: center; font-size: small">
+              Software Developer trainee At Krish Technolabs
+            </p>
+
+            <hr />
+            <p>
+              Who's viewed your profile
+              <span style="color: blue; margin-left: 20px"> 52 </span>
+            </p>
+            <p>
+              Connnections
+              <span style="color: blue; margin-left: 110px"> 52 </span>
+            </p>
+            <p><b>Manage your network</b></p>
+            <hr />
+            <p>Access exclusive tools & insights</p>
+            <img src="./image/premium.jpeg" style="width: 15px" alt="" />
+
+            <a href="#">Try Premium for Free</a>
+            <br /><i class="fa-sharp fa-solid fa-bookmark"></i>
+            <span>My items</span>
+          </div>
+        </div>
+        <div
+          class="titleaccordin"
+          style="margin-top: 20px; position: sticky; top: 100px"
+        >
+          <div class="accordion recent" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  Recent
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Group
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Events
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Followed Hashtag
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-main; margin-left:0">
+        <div class="card" style="width: 500px; margin-top: 30px">
+          <!-- <img src="..." class="card-img-top" alt="..." /> -->
+          <div class="PostSearch">
+            <img src="./image/profile.jpeg" class="profilemain" alt="profile" />
+            <input
+              class="form-control me-2 postinput"
+              type="search"
+              placeholder="Start Post"
+              style="font-family: Arial, FontAwesome"
+              aria-label="Search"
+              class="search"
+            />
+          </div>
+
+          <div class="card-body">
+            <div class="buttoncon">
+              <button>
+                <i class="fa-solid fa-image" style="color: blue"></i>
+                Photo
+              </button>
+              <button>
+                <i class="fa-brands fa-youtube" style="color: #4caf50"></i>Video
+              </button>
+              <button>
+                <i class="fa-solid fa-calendar" style="color: goldenrod"></i
+                >Event
+              </button>
+              <button>
+                <i class="fa-solid fa-square" style="color: rgb(136, 0, 0)"></i
+                >Write Articl
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="width: 500px; margin-top: 30px">
+          <!-- <img src="..." class="card-img-top" alt="..." /> -->
+          <div class="PostSearch">
+            <img src="./image/profile.jpeg" class="profilepost" alt="profile" />
+            <div class="user">
+              <span style="font-weight: 600; font-size: 15px">Steve Nouri</span
+              ><br />
+              <span style="font-size: 13px">Dude Coder</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="postcontent">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+              nobis vel beatae iusto ut dolorum officiis repellendus magni..
+              <img
+                src="./image/post1.jpeg"
+                style="width: 470px; margin-top: 10px"
+                alt=""
+              />
+            </div>
+            <div class="buttonpost">
+              <button><i class="fa-regular fa-heart"></i> Like</button>
+              <button><i class="fa-regular fa-comment"></i>Commentf</button>
+              <button><i class="fa-sharp fa-solid fa-repeat"></i>Report</button>
+              <button>
+                <i class="fa-sharp fa-solid fa-paper-plane"></i>Send
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="width: 500px; margin-top: 30px">
+          <!-- <img src="..." class="card-img-top" alt="..." /> -->
+          <div class="PostSearch">
+            <img src="./image/profile.jpeg" class="profilepost" alt="profile" />
+            <div class="user">
+              <span style="font-weight: 600; font-size: 15px">Steve Nouri</span
+              ><br />
+              <span style="font-size: 13px">Dude Coder</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="postcontent">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+              nobis vel beatae iusto ut dolorum officiis repellendus magni..
+              <img
+                src="./image/post2.jpeg"
+                style="width: 470px; margin-top: 10px"
+                alt=""
+              />
+            </div>
+            <div class="buttonpost">
+              <button><i class="fa-regular fa-heart"></i> Like</button>
+              <button><i class="fa-regular fa-comment"></i>Commentf</button>
+              <button><i class="fa-sharp fa-solid fa-repeat"></i>Report</button>
+              <button>
+                <i class="fa-sharp fa-solid fa-paper-plane"></i>Send
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="postcontent">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+              nobis vel beatae iusto ut dolorum officiis repellendus magni..
+              <img
+                src="./image/post3.jpeg"
+                style="width: 470px; margin-top: 10px"
+                alt=""
+              />
+            </div>
+            <div class="buttonpost">
+              <button><i class="fa-regular fa-heart"></i> Like</button>
+              <button><i class="fa-regular fa-comment"></i>Commentf</button>
+              <button><i class="fa-sharp fa-solid fa-repeat"></i>Report</button>
+              <button>
+                <i class="fa-sharp fa-solid fa-paper-plane"></i>Send
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="postcontent">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+              nobis vel beatae iusto ut dolorum officiis repellendus magni..
+              <img
+                src="./image/post4.jpeg"
+                style="width: 470px; margin-top: 10px"
+                alt=""
+              />
+            </div>
+            <div class="buttonpost">
+              <button><i class="fa-regular fa-heart"></i> Like</button>
+              <button><i class="fa-regular fa-comment"></i>Commentf</button>
+              <button><i class="fa-sharp fa-solid fa-repeat"></i>Report</button>
+              <button>
+                <i class="fa-sharp fa-solid fa-paper-plane"></i>Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-right">
+        <div class="card" style="width: 18rem">
+          <!-- <img src="..." class="card-img-top" alt="..." /> -->
+
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center">
+              Linked In News
+            </h5>
+            <hr />
+
+            <ul>
+              <li>Lorem ipsum, dolor sit amet consectetur</li>
+              <li>Lorem ipsum, dolor sit amet consectetur</li>
+              <li>Lorem ipsum, dolor sit amet consectetur</li>
+              <li>Lorem ipsum, dolor sit amet consectetur</li>
+              <li>Lorem ipsum, dolor sit amet consectetur</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="width: 18rem; position: sticky; top: 100px; margin-top: 20px"
+        >
+          <!-- <img src="..." class="card-img-top" alt="..." /> -->
+          <center>
+            <img src="./image/profile.jpeg" class="profileside" alt="profile" />
+          </center>
+          <div class="card-body">
+            <p class="card-text" style="text-align: center; font-size: small">
+              You might like to follow <b>Softbank Group Corp.</b>
+            </p>
+            <center>
+              <button
+                style="
+                  background-color: white;
+                  color: blue;
+                  border-radius: 25px;
+                  border-color: blue;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                "
+              >
+                follow
+              </button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
